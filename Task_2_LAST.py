@@ -19,7 +19,6 @@ class Library:
             raise ValueError("This book is already added")
         if author.author_name not in self.authors:
             self.authors.append(author.author_name)
-        return Book
 
     def group_by_author(self, author):
         return f"Books by {author} author: {list(map(lambda x: x[0], filter(lambda x: x[2] == author, self.year)))}"
@@ -76,8 +75,6 @@ George_Orwell = Author("George Orwell", "England", 1903, ["Animal Farm", "1984",
 Taras_Shevchenko = Author("Taras Shevchenko", "Ukraine", 1814, ["Katerina", "Kobzar"])
 Jack_London = Author("Jack London", "England", 1903, ["Smoke Bellew", "Lost Face"])
 
-#  Class Book
-book1 = Book
 
 #  append book to the Library
 library1.new_book("1984", 1940, George_Orwell)
